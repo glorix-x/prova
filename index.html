@@ -21,70 +21,8 @@ il singolo contatto.-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rubrica?</title>
-    <style>
-        .contenitore{
-            display: flex;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
-    <div class="contenitore"><h5>lista contatti: </h5><div id="visualizza" style="padding: 7px;"></div></div>
-    
-    <div id="inserisciContatto"></div>
-    <div id="ricercaContatto"></div>
-
-    <script>
-        const listaContatti = [
-            { nome: "Mario Rossi", telefono: "3451234567", email: "mario.rossi@example.com" },
-            { nome: "Luca Bianchi", telefono: "3209876543", email: "luca.bianchi@example.com" },
-            { nome: "Giulia Verdi", telefono: "3331122334",email: "poropopo.gmail.com" }
-        ];
-
-        function visualizzaContatti() {
-            let output = "";
-            listaContatti.forEach((c, i) => {
-                output += ` ${c.nome} - ${c.telefono} - ${c.email}\n`;
-            });
-            document.getElementById("visualizza").innerText = output;
-        }
-
-        function inserisciContatto(nome, telefono, email) {
-            const esiste = listaContatti.some(c => c.nome === nome);
-            if (esiste) {
-                document.getElementById("inserisciContatto").innerText = "Contatto già esistente!!";
-                return;
-            }
-            listaContatti.push({ nome, telefono, email });
-            document.getElementById("inserisciContatto").innerText = "Contatto aggiunto con successo!!";
-        }
-
-        function modificaContatto(index, nuovoNome, nuovoTelefono, nuovaEmail) {
-            if (!listaContatti[index]) return;
-            listaContatti[index].nome = nuovoNome;
-            listaContatti[index].telefono = nuovoTelefono;
-            listaContatti[index].email = nuovaEmail;
-        }
-
-        function eliminaContatto(index) {
-            listaContatti.splice(index, 1);
-        }
-
-        function ricercaContatto(nome) {
-            const trovato = listaContatti.find(c => c.nome === nome);
-            if (trovato) {
-                document.getElementById("ricercaContatto").innerText = 
-                    `Contatto trovato: ${trovato.nome} - ${trovato.telefono} - ${trovato.email ?? "N/D"}`;
-            } else {
-                document.getElementById("ricercaContatto").innerText = "Contatto non trovato!";
-            }
-        }
-        visualizzaContatti()
-        inserisciContatto("giulia","3333333","popopo@gmail.com")
-        modificaContatto(0,"popopo","44","poropopo@gmail.com")
-        eliminaContatto(1)
-        ricercaContatto("popopo")
-        visualizzaContatti()
-    </script>
+    <p>prova prova prova</p>
 </body>
 </html>
